@@ -1,0 +1,51 @@
+@import "./arena.css";
+@import "./users.css";
+@import "./actions.css";
+
+:root {
+    --color-red: #f65314;
+    --color-green: #7cbb00;
+    --color-blue: #00a1f1;
+    --color-yellow: #ffbb00;
+    --color-grey-light: #d3d3d3;
+    --color-grey-dark: #808080;
+    --color-black: #000000;
+    --color-white: #ffffff;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    padding: 16px 0;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    position: sticky;
+    bottom: 0px;
+    padding: 8px 0;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,36 @@
+.users {
+    width: 200px;
+    display: table;
+    height: 100%;
+    margin-left: 33px;
+}
+
+.list {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.user {
+    color: var(--color-white);
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent;
+    margin: 5px 0;
+}
+
+.you {
+    border-color: var(--color-black);
+}
+
+.user>span {
+    margin: 0 10px;
+}
+
+.join {
+    cursor: pointer;
+    background-color: var(--color-grey-light);
+}

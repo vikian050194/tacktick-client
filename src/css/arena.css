@@ -1,0 +1,82 @@
+.cell {
+    border: 1px dotted var(--color-grey-light);
+    border-radius: 5px;
+}
+
+.square {
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.empty{
+    border-color: var(--color-white);
+}
+
+.unit {
+    border-color: var(--color-white);
+}
+
+.wall {
+    border-color: var(--color-grey-dark);
+    background-color: var(--color-grey-light);
+}
+
+.block {
+    border-color: var(--color-white);
+    background-color: var(--color-grey-light);
+}
+
+.color-fg-0 {
+    color: var(--color-red);
+}
+
+.color-bg-0 {
+    background-color: var(--color-red);
+}
+
+.color-fg-1 {
+    color: var(--color-green);
+}
+
+.color-bg-1 {
+    background-color: var(--color-green);
+}
+
+.color-fg-2 {
+    color: var(--color-blue);
+}
+
+.color-bg-2 {
+    background-color: var(--color-blue);
+}
+
+.color-fg-3 {
+    color: var(--color-yellow);
+}
+
+.color-bg-3 {
+    background-color: var(--color-yellow);
+}
+
+.color-bg-b {
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--color-white);
+    animation: blinkingBackground 750ms linear infinite;
+}
+
+@keyframes blinkingBackground {
+    0% {
+        background-color: #f65314;
+    }
+
+    100% {
+        background-color: #d3d3d3;
+    }
+}
