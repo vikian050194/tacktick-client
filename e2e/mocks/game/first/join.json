@@ -1,0 +1,12 @@
+{
+    "statusCode": 200,
+    "data": {
+        "id": 0,
+        "gameId": 0,
+        "userId": 0,
+        "health": 3,
+        "x": 0,
+        "y": 0,
+        "name": "A"
+    }
+}

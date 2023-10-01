@@ -51,7 +51,7 @@ export class Arena extends BaseComponent {
                 }
 
                 this.builder.open("td", { class: "cell" });
-                this.builder.div({ classList: classes }).close();
+                this.builder.div({ classList: classes, x, y }).close();
                 this.builder.close();
             }
 

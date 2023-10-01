@@ -1,0 +1,33 @@
+{
+    "statusCode": 200,
+    "data": {
+        "capacity": 2,
+        "size": 6,
+        "walls": [
+            {
+                "x": 1,
+                "y": 1
+            },
+            {
+                "x": 4,
+                "y": 4
+            },
+            {
+                "x": 4,
+                "y": 1
+            },
+            {
+                "x": 1,
+                "y": 4
+            }
+        ],
+        "history": [
+            {
+                "id": 0,
+                "gameId": 0,
+                "players": []
+            }
+        ],
+        "index": 0
+    }
+}

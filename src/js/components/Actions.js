@@ -3,7 +3,7 @@ import { actionsSetAction, actionsResetAction, actionsSubmitAction } from "actio
 import { BaseComponent } from "./Base";
 
 const options = ["empty", "left", "right", "up", "down"];
-const optionsSign = ["", "L", "R", "U", "D"];
+const optionsSign = [" ", "L", "R", "U", "D"];
 
 export class Actions extends BaseComponent {
     constructor(dispatch) {

@@ -26,13 +26,18 @@ export const test = base.extend({
         console.log(testInfo.titlePath);
 
         const [fileName, ...tail] = testInfo.titlePath;
+        const adjustedTitlePath = tail.map(t => t.toLowerCase());
 
         console.info(fileName);
 
-        const endpoints = ["arena"];
+        const endpoints = [
+            "arena",
+            "join"
+        ];
+
         for (const endpoint of endpoints) {
-            const pathToData = path.join(PWD, "e2e", "mocks", ...tail.map(t => t.toLowerCase()), `${endpoint}.json`);
-            const pathToDatas = path.join(PWD, "e2e", "mocks", ...tail.map(t => t.toLowerCase()), endpoint);
+            const pathToData = path.join(PWD, "e2e", "mocks", ...adjustedTitlePath, `${endpoint}.json`);
+            const pathToDatas = path.join(PWD, "e2e", "mocks", ...adjustedTitlePath, endpoint);
 
             const mocks = [];
 
@@ -42,7 +47,7 @@ export const test = base.extend({
             }
             if (fs.existsSync(pathToDatas)) {
                 for (let index = 0; ; index++) {
-                    const pathToMock = path.join(PWD, "e2e", "mocks", ...tail.map(t => t.toLowerCase()), endpoint, `${index}.json`);
+                    const pathToMock = path.join(PWD, "e2e", "mocks", ...adjustedTitlePath, endpoint, `${index}.json`);
                     if (fs.existsSync(pathToMock)) {
                         const content = fs.readFileSync(pathToMock);
                         mocks.push(JSON.parse(content));
@@ -61,6 +66,7 @@ export const test = base.extend({
 
             await page.route(`*/**/api/${endpoint}`, async route => {
                 const mock = mocks[index];
+                const previousIndex = index;
                 index++;
                 if (index === mocks.length) {
                     index = 0;
@@ -68,7 +74,7 @@ export const test = base.extend({
                 const { data, statusCode } = mock;
 
                 console.info(endpoint);
-                console.info(index);
+                console.info(previousIndex);
                 console.info(statusCode);
                 console.info(JSON.stringify(data));
 

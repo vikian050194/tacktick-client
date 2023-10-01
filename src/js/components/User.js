@@ -15,17 +15,20 @@ export class User extends BaseComponent {
         const onLeave = () => this.dispatch(userLeaveAction(model));
 
         let text = null;
+        let cls = null;
         let onClick = null;
 
         if (model.type === "guest") {
             text = "join";
+            cls = "join";
             onClick = onJoin;
         } else {
             text = "leave";
+            cls = "leave";
             onClick = onLeave;
         }
 
-        this.builder.button().onClick(onClick).text(text).close();
+        this.builder.button({ class: cls }).onClick(onClick).text(text).close();
         return this.builder.done();
     }
 }

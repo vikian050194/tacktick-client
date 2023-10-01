@@ -25,12 +25,3 @@
 .you {
     border-color: var(--color-black);
 }
-
-.user>span {
-    margin: 0 10px;
-}
-
-.join {
-    cursor: pointer;
-    background-color: var(--color-grey-light);
-}
